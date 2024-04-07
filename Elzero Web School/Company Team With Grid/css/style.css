@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    line-height: 23px;
+}
+
+::selection {
+    background-color: #ff3d00;
+    color: white;
+}
+
+.page {
+    width: 90vw;
+    background-color: #ddd;
+    margin: 20px auto;
+    padding: 20px;
+
+    /* Grid */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 8px;
+    column-gap: 8px;
+}
+
+.grid-card {
+    position: relative;
+    background-color: white;
+    border-bottom: 3px solid #ff3d00;
+    padding: 15px;
+}
+
+.grid-card::after {
+    content: '"';
+    color: #a8a8a8 !important;
+    font-size: 3rem;
+    transform: rotate(10deg);
+    position: absolute;
+    right: 15px;
+    bottom: 0px;
+}
+
+.grid-card .name {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.grid-card .title {
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #a8a8a8 !important;
+}
+
+.grid-card .description1 {
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin: 15px auto;
+}
+
+.grid-card .description2 {
+    font-size: 0.8rem;
+    margin: 15px auto;
+}
+
+/* Specifications */
+.grid-card1 {
+    grid-column: 1 / span 2;
+}
+
+.grid-card3 {
+    grid-column: 4;
+    grid-row: 1 / span 3;
+}
+
+.grid-card4 {
+    grid-row: 2 / span 2;
+}
+
+.grid-card5 {
+    grid-row: 2;
+    grid-column: 2 / span 2;
+}
+
+.grid-card6 {
+    grid-row: 3;
+    grid-column: 2 / span 2;
+}
+
+/* Dark Theme */
+.dark {
+    background-color: black;
+    color: white;
+}
